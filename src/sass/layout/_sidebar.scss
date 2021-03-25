@@ -1,0 +1,94 @@
+.backdrop {
+	background-color: rgba(0, 0, 0, 0.6);
+	backdrop-filter: blur(5px);
+	position: fixed;
+	top: 0;
+	height: 100vh;
+	width: 100vw;
+	z-index: 2000;
+	transition: all 0.3s ease-in-out;
+}
+
+.sidebar {
+	height: 100vh;
+	transition: all 0.3s ease-out;
+	width: 0%;
+	position: fixed;
+
+	right: -100px;
+	top: 0;
+	background-color: darken($color: #918d8d, $amount: 50%);
+	z-index: 2000;
+	overflow: hidden;
+	display: grid;
+	opacity: 0;
+	grid-template-rows: repeat(2, 10rem);
+	padding: 5rem;
+
+	&__heading {
+		display: flex;
+		color: $color-white;
+		text-transform: uppercase;
+		letter-spacing: 0.8rem;
+	}
+
+	&__links {
+		display: grid;
+		list-style: none;
+		gap: 2rem;
+		// position: absolute;
+		grid-row: 2;
+		// top: 40%;
+		// left: 30%;
+		// transform: translate(-50%, -50%);
+		font-size: 2rem;
+		letter-spacing: 0.4rem;
+		font-weight: 300;
+
+		& a:link,
+		a:visited,
+		a:active {
+			text-decoration: none;
+			text-transform: uppercase;
+			color: $color-white;
+			transition: all 0.3s;
+			position: relative;
+
+			&::after {
+				bottom: 0;
+				content: "";
+				display: block;
+				height: 2px;
+				left: 50%;
+				position: absolute;
+				background-color: darken($color: rgb(224, 13, 13), $amount: 20%);
+				transition: width 0.3s ease 0s, left 0.3s ease 0s;
+				width: 0;
+			}
+		}
+
+		& a:hover {
+			color: darken($color: $color-white, $amount: 20%);
+
+			&::after {
+				width: 100%;
+				left: 0;
+			}
+		}
+	}
+}
+
+.sidebar-open {
+	width: 30%;
+	opacity: 1;
+
+	@include respond(tab-land) {
+		width: 40%;
+	}
+	@include respond(tab-port) {
+		width: 50%;
+	}
+	@include respond(phone) {
+		width: 70%;
+	}
+}
