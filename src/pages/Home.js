@@ -5,16 +5,7 @@ const Home = () => {
 	return (
 		<div>
 			<Header />
-			<div>asasas asa</div>
-			<div>asasas asa</div>
-			<div>asasas asa</div>
-			<div>asasas asa</div>
-			<div>asasas asa</div>
-			<div>asasas asa</div>
-			<div>asasas asa</div>
-			<div>asasas asa</div>
-			<div>asasas asa</div>
-			<div>asasas asa</div>
+			<div style={{ height: "100vh" }}>asasas asa</div>
 		</div>
 	);
 };
