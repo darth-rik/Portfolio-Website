@@ -1,7 +1,11 @@
 import React from "react";
 import PropTypes from "prop-types";
+import { Link } from "react-scroll";
 
-const Sidebar = ({ sidebar }) => {
+const Sidebar = ({ sidebar, closeSidebar }) => {
+	const closePane = (e) => {
+		closeSidebar();
+	};
 	return (
 		<div ref={sidebar} className='sidebar'>
 			<div className='sidebar__heading'>
@@ -9,16 +13,50 @@ const Sidebar = ({ sidebar }) => {
 			</div>
 			<ul className='sidebar__links'>
 				<li>
-					<a href='//#region '>Home</a>{" "}
+					<Link
+						onClick={closePane}
+						to='section-1'
+						className='link'
+						smooth={true}
+						spy={true}
+					>
+						Home
+					</Link>
 				</li>
 				<li>
-					<a href='//#region '>Projects</a>
+					<Link
+						onClick={closePane}
+						to='section-2'
+						className='link'
+						smooth={true}
+						spy={true}
+					>
+						{" "}
+						Projects
+					</Link>
 				</li>
 				<li>
-					<a href='//#region '>About</a>
+					<Link
+						onClick={closePane}
+						to='section-3'
+						className='link'
+						smooth={true}
+						spy={true}
+					>
+						{" "}
+						About
+					</Link>
 				</li>
 				<li>
-					<a href='//#region '>Contact</a>
+					<Link
+						onClick={closePane}
+						to='section-4'
+						className='link'
+						smooth={true}
+						spy={true}
+					>
+						Contact
+					</Link>
 				</li>
 			</ul>
 		</div>

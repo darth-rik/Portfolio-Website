@@ -5,11 +5,13 @@ import Avatar from "../../images/avatar.jpg";
 
 import { MdKeyboardArrowDown } from "react-icons/md";
 
-const Header = () => {
+const Header = ({ arrow = (f) => f }) => {
 	const [isOpen, setIsOpen] = useState(false);
 	const sidebar = useRef();
 	const backdrop = useRef();
 	const header = useRef();
+	const nav = useRef();
+
 	useEffect(() => {
 		if (isOpen) {
 			document.body.style.overflowY = "hidden";
@@ -39,6 +41,24 @@ const Header = () => {
 			});
 		};
 	}, []);
+	useEffect(() => {
+		const height = nav.current.getBoundingClientRect().height;
+		const callback = (entries) => {
+			const [entry] = entries;
+			if (!entry.isIntersecting) nav.current.classList.add("menu-sticky");
+			else nav.current.classList.remove("menu-sticky");
+		};
+
+		const options = {
+			root: null,
+			threshold: 0,
+			rootMargin: `-${height}px`,
+		};
+
+		const observer = new IntersectionObserver(callback, options);
+
+		observer.observe(header.current);
+	}, []);
 
 	useEffect(() => {
 		const Parallax = () => {
@@ -54,12 +74,15 @@ const Header = () => {
 	}, [header]);
 
 	return (
-		<header ref={header} className='header'>
+		<header id='section-1' ref={header} className='header'>
 			<div ref={backdrop}>
-				<Sidebar sidebar={sidebar} />
+				<Sidebar closeSidebar={() => setIsOpen(false)} sidebar={sidebar} />
 			</div>
 
-			<Navigation open={() => (!isOpen ? setIsOpen(true) : setIsOpen(false))} />
+			<Navigation
+				navigation={nav}
+				open={() => (!isOpen ? setIsOpen(true) : setIsOpen(false))}
+			/>
 
 			<div className='header-details'>
 				<img
@@ -75,7 +98,7 @@ const Header = () => {
 				</h2>
 			</div>
 
-			<div className='header-arrow'>
+			<div onClick={arrow} className='header-arrow'>
 				<MdKeyboardArrowDown />
 			</div>
 		</header>

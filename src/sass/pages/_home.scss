@@ -1,41 +1,238 @@
 .section-about {
+	// background-color: $color-grey-light-1;
+	padding: 10rem 0;
+	transition: all 1s;
+
+	.description {
+		margin: 0 auto;
+		width: 70%;
+
+		&__heading--primary {
+			font-size: 3rem;
+			font-weight: 600;
+			letter-spacing: 0.5px;
+		}
+		&__heading--secondary {
+			font-weight: 600;
+			letter-spacing: 0.2px;
+		}
+
+		&__full-story {
+			display: flex;
+			align-items: center;
+			font-size: 1.4rem;
+			font-weight: 600;
+
+			& > *:not(:last-child) {
+				margin-right: 0.5rem;
+
+				&:hover {
+					color: $color-primary-dark;
+					transition: all 0.3s;
+				}
+			}
+		}
+
+		&__icons {
+			list-style: none;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			font-size: 2.5rem;
+
+			& > * {
+				margin-right: 1.5rem;
+				& > *:hover {
+					color: $color-primary-dark;
+					transition: all 0.3s ease-in-out;
+					-webkit-transition: all 0.3s ease-in-out;
+				}
+			}
+		}
+
+		&__btn {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+		}
+
+		@include respond(tab-port) {
+			width: 90%;
+		}
+	}
+
+	@include respond(tab-port) {
+		padding: 5rem 0;
+	}
+}
+
+.section-skills {
 	background-color: $color-grey-light-1;
-	padding: 25rem 0;
-	margin-top: -20vh;
+	padding: 8rem 0 10rem;
+	transition: all 1s;
+
+	.container {
+		width: 70%;
+		margin: 0 auto;
+		text-align: center;
+
+		.heading__primary {
+			font-size: 3rem;
+			font-weight: 600;
+			letter-spacing: 0.5px;
+		}
+
+		.icons-container {
+			display: grid;
+			grid-template-columns: repeat(5, 1fr);
+			gap: 6rem;
+
+			@include respond(tab-port) {
+				grid-template-columns: repeat(3, 1fr);
+				gap: 4rem;
+			}
+
+			&__icon {
+				display: grid;
+				gap: 0.5rem;
+				justify-content: center;
+
+				&-image {
+					height: 8rem;
+					width: 8rem;
+				}
+
+				&-text {
+				}
+			}
+		}
+
+		@include respond(tab-port) {
+			width: 90%;
+		}
+	}
 
 	@include respond(tab-port) {
-		padding: 20rem 0;
+		padding: 5rem 0;
 	}
 }
 
-.section-tours {
+.section-contact {
 	background-color: $color-grey-light-1;
-	padding: 25rem 0 15rem 0;
-	margin-top: -10rem;
+	padding: 8rem 0 10rem;
+	transition: all 1s;
+
+	.container {
+		width: 50%;
+		margin: 0 auto;
+		text-align: center;
+
+		.heading__primary {
+			font-size: 3rem;
+			font-weight: 600;
+			letter-spacing: 0.5px;
+		}
+
+		.contact-details {
+			display: grid;
+			grid-template-columns: repeat(2, max-content);
+			justify-content: center;
+			align-items: center;
+			gap: 10rem;
+
+			&__email > *:first-child {
+				font-size: 3rem;
+			}
+			&__phone > *:first-child {
+				font-size: 2.5rem;
+			}
+
+			@include respond(tab-port) {
+				grid-template-columns: repeat(2, 1fr);
+			}
+		}
+
+		@include respond(tab-port) {
+			width: 90%;
+		}
+	}
 
 	@include respond(tab-port) {
-		padding: 20rem 0 10rem 0;
+		padding: 5rem 0;
 	}
 }
 
-.section-stories {
-	position: relative;
-	padding: 15rem 0;
+.section-projects {
+	padding: 8rem 0 10rem;
+	transition: all 1s;
+
+	.container {
+		width: 90%;
+		margin: 0 auto;
+		text-align: center;
+
+		.heading__primary {
+			font-size: 3rem;
+			font-weight: 600;
+			letter-spacing: 0.5px;
+		}
+
+		.projects-container {
+			display: grid;
+			grid-template-columns: repeat(2, 1fr);
+			gap: 5rem;
+
+			.project {
+				box-shadow: 2px 4px 5px rgba($color-black, 0.2);
+				padding-bottom: 2rem;
+				&__img {
+					position: relative;
+
+					img {
+						width: 100%;
+						height: 100%;
+						transition: all 0.5s;
+					}
+
+					p {
+						position: absolute;
+						top: 50%;
+						left: 50%;
+						transform: translate(-50%, -50%);
+						color: $color-white;
+						width: 90%;
+						opacity: 0;
+					}
+
+					&:hover {
+						img {
+							filter: brightness(30%) blur(5px);
+						}
+
+						p {
+							opacity: 1;
+							transition: all 0.8s;
+						}
+					}
+				}
+
+				.project__buttons > *:not(:last-child) {
+					margin-right: 2rem;
+				}
+			}
+
+			@include respond(tab-port) {
+				grid-template-columns: 1fr;
+			}
+		}
+	}
 
 	@include respond(tab-port) {
-		padding: 10rem 0;
+		padding: 5rem 0;
 	}
 }
 
-.section-book {
-	padding: 15rem 0;
-	background-image: linear-gradient(
-		to right bottom,
-		$color-primary-light,
-		$color-primary-dark
-	);
-
-	@include respond(tab-port) {
-		padding: 10rem 0;
-	}
+.section-hidden {
+	opacity: 0;
+	transform: translateY(8rem);
 }

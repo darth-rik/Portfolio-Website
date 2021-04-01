@@ -46,17 +46,16 @@
 		letter-spacing: 0.4rem;
 		font-weight: 300;
 
-		& a:link,
-		a:visited,
-		a:active {
+		.link {
 			text-decoration: none;
 			text-transform: uppercase;
 			color: $color-white;
 			transition: all 0.3s;
 			position: relative;
+			cursor: pointer;
 
 			&::after {
-				bottom: 0;
+				bottom: -5px;
 				content: "";
 				display: block;
 				height: 2px;
@@ -66,14 +65,14 @@
 				transition: width 0.3s ease 0s, left 0.3s ease 0s;
 				width: 0;
 			}
-		}
 
-		& a:hover {
-			color: darken($color: $color-white, $amount: 20%);
+			&:hover {
+				color: darken($color: $color-white, $amount: 20%);
 
-			&::after {
-				width: 100%;
-				left: 0;
+				&::after {
+					width: 100%;
+					left: 0;
+				}
 			}
 		}
 	}

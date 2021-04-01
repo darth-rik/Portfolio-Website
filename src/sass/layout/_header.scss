@@ -1,5 +1,5 @@
 .header {
-	background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+	background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
 		url(../../images/bakground-desktop-min.jpg);
 	height: 100vh;
 
@@ -8,10 +8,46 @@
 	background-attachment: fixed;
 	-webkit-background-attachment: fixed;
 	background-position: 0 0;
-	scroll-behavior: smooth;
+
 	background-repeat: no-repeat;
 
 	position: relative;
+
+	@include respond(tab-port) {
+		background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+			url(../../images/background-ipad-vert-min.png);
+	}
+
+	@include respond(tab-land) {
+		background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+			url(../../images/background-ipad-horiz-min.png);
+	}
+
+	@include respond(phone) {
+		background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+			url(../../images/background-phone-vert-min.png);
+	}
+
+	// position: relative;
+	// overflow: hidden;
+	// color: $color-white;
+	// height: 100vh;
+
+	// &::before {
+	// 	background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+	// 		url(../../images/bakground-desktop-min.jpg);
+	// 	background-repeat: no-repeat;
+	// 	background-position: center top;
+	// 	background-size: cover;
+	// 	content: "";
+	// 	height: 100%;
+
+	// 	position: fixed;
+	// 	top: 0;
+	// 	left: 0;
+	// 	width: 100%;
+	// 	z-index: -1;
+	// }
 }
 
 .header-details {
@@ -33,7 +69,7 @@
 
 	&__heading--primary {
 		font-size: 4.2rem;
-		font-weight: 700;
+		font-weight: 600;
 		letter-spacing: 0.02em;
 
 		@include respond(phone) {
