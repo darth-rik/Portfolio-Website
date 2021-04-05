@@ -21,6 +21,7 @@
 	@include respond(tab-land) {
 		background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
 			url(../../images/background-ipad-horiz-min.png);
+		background-attachment: scroll;
 	}
 
 	@include respond(phone) {
@@ -57,7 +58,7 @@
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%);
-	animation: moveIn 1.5s ease-in;
+	animation: moveIn 0.5s ease-in;
 
 	&__avatar {
 		height: 16rem;

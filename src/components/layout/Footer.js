@@ -8,7 +8,7 @@ const Footer = () => {
 			<div className='container'>
 				<ul className='social'>
 					<li className='social__links'>
-						<a href=''>
+						<a href='https://github.com/darth-rik'>
 							<FaGithub />
 						</a>
 					</li>

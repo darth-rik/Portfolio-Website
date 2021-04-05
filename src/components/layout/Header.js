@@ -65,8 +65,7 @@ const Header = ({ arrow = (f) => f }) => {
 			let positionY = window.pageYOffset / 2;
 			header.current.style.backgroundPosition = "0 -" + positionY + "px";
 		};
-
-		window.addEventListener("scroll", Parallax);
+		if (window.screen.width > 1024) window.addEventListener("scroll", Parallax);
 
 		return () => {
 			window.removeEventListener("scroll", Parallax);

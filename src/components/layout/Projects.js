@@ -19,9 +19,12 @@ const Projects = ({ projects }) => {
 						<div className='project__img u-margin-bottom-small'>
 							<img src={StringZWall} alt='' />
 							<p>
-								Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-								Voluptatum beatae nobis aliquam optio? Nemo nostrum sint velit
-								ad cupiditate iusto nulla alias deleniti aliq
+								StringZ is a social media website meant for musicians. <br />{" "}
+								The project was built using <strong>ReactJS</strong> ,{" "}
+								<strong>Redux</strong> and <strong>Material-UI</strong> on the
+								Front-End and <strong>NodeJS</strong>, <strong>MongoDB</strong>{" "}
+								on the Back-End. To host the profile images,
+								<strong> Cloudinary</strong>'s media storage platform was used.
 							</p>
 						</div>
 						<h2 className='u-margin-bottom-x-small'>StringZ</h2>
@@ -40,9 +43,10 @@ const Projects = ({ projects }) => {
 						<div className='project__img u-margin-bottom-small'>
 							<img src={FoodHuntWall} alt='' />
 							<p>
-								Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-								Voluptatum beatae nobis aliquam optio? Nemo nostrum sint velit
-								ad cupiditate iusto nulla alias deleniti aliq
+								FoodHunt is a web app to search for amazing recipes from around
+								the world. <br /> The project was built using{" "}
+								<strong>ReactJS</strong> , <strong> React Context-API</strong>{" "}
+								and <strong>Tailwind CSS</strong>.
 							</p>
 						</div>
 						<h2 className='u-margin-bottom-x-small'>FoodHunt</h2>
@@ -61,9 +65,12 @@ const Projects = ({ projects }) => {
 						<div className='project__img u-margin-bottom-small'>
 							<img src={TodoAppWall} alt='' />
 							<p>
-								Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-								Voluptatum beatae nobis aliquam optio? Nemo nostrum sint velit
-								ad cupiditate iusto nulla alias deleniti aliq
+								A web application to organize daily tasks. <br /> Some of the
+								enhanced features include <u>dark mode</u> ,{" "}
+								<u>a clear button to clear all the completed todos</u> ,{" "}
+								<u>drag and drop functionality to rearrange the todo list</u>{" "}
+								etc. <br /> The project was made using vanilla{" "}
+								<strong>Javascript</strong> and <strong>CSS</strong>
 							</p>
 						</div>
 						<h2 className='u-margin-bottom-x-small'>Todo App</h2>

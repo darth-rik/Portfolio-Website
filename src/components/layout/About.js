@@ -10,24 +10,30 @@ const About = ({ about }) => {
 					Hello, I'm Debanjit
 				</h2>
 				<h4 className='description__heading--secondary u-margin-bottom-x-small'>
-					Web Developer from India
+					A Web Developer from India
 				</h4>
-
-				<p className='paragraph'>
-					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin nibh
-					felis, rutrum id eleifend nec, viverra ac nunc. Fusce sit amet
-					interdum metus, a interdum massa. Nullam gravida, elit sed mattis
-					semper, libero leo convallis mi, et elementum magna tortor sed tortor.
-					Aliquam hendrerit metus non enim fringilla, eu molestie ante bibendum.
+				<p className='paragraph u-margin-bottom-small'>
+					I never would have thought that programming would be so rewarding,
+					until I had built a few projects with HTML, CSS and Javascript. It was
+					an ardous task at first, especially since I was just starting out. But
+					the joy and happiness that came with completing a project was
+					something out of this world. And it was this reason that kept me
+					going. Kept me motivated to learn more. <br /> I am aware that the
+					technology world changes at a very fast pace and one has to constantly
+					keep themselves updated. Hence, I made sure to learn and use
+					frameworks and tools such as React, Sass, Material-UI, Tailwind CSS in
+					order to efficiently build beautiful modern websites and apps. <br />{" "}
+					Web Development has never been "just a job" for me, but a challenge to
+					improve my skills, to learn new things and create high quality
+					websites and applications.
 				</p>
-				<div className='description__full-story u-margin-bottom-small'>
-					<a href=''>Read my story </a>
-					<BsArrowRight />
-				</div>
-
+				{/* <div className='description__full-story '>
+					{/* <a href=''>Read my story </a> */}
+				{/* <BsArrowRight /> */}
+				{/* </div> */}
 				<ul className='description__icons u-margin-bottom-x-small'>
 					<li>
-						<a href=''>
+						<a href='https://github.com/darth-rik'>
 							<FaGithub />
 						</a>
 					</li>
