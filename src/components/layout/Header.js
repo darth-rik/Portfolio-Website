@@ -3,6 +3,8 @@ import Navigation from "../Navigation";
 import Sidebar from "../Sidebar";
 import Avatar from "../../images/avatar.jpg";
 
+import { Link } from "react-scroll";
+
 import { MdKeyboardArrowDown } from "react-icons/md";
 
 const Header = ({ arrow = (f) => f }) => {
@@ -97,9 +99,9 @@ const Header = ({ arrow = (f) => f }) => {
 				</h2>
 			</div>
 
-			<div onClick={arrow} className='header-arrow'>
+			<Link to='section-3' smooth={true} spy={true} className='header-arrow'>
 				<MdKeyboardArrowDown />
-			</div>
+			</Link>
 		</header>
 	);
 };

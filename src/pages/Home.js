@@ -26,7 +26,7 @@ const Home = () => {
 
 		const sectionObserver = new IntersectionObserver(revealSection, {
 			root: null,
-			threshold: 0.25,
+			threshold: 0.5,
 		});
 		refs.forEach((ref) => {
 			sectionObserver.observe(ref.current);
