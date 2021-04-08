@@ -9,6 +9,7 @@ import { MdKeyboardArrowDown } from "react-icons/md";
 
 const Header = ({ arrow = (f) => f }) => {
 	const [isOpen, setIsOpen] = useState(false);
+	const [mobile, setMobile] = useState(false);
 	const sidebar = useRef();
 	const backdrop = useRef();
 	const header = useRef();
@@ -74,6 +75,12 @@ const Header = ({ arrow = (f) => f }) => {
 		};
 	}, [header]);
 
+	useEffect(() => {
+		if (window.screen.width <= 1200) {
+			setMobile(true);
+		}
+	}, []);
+
 	return (
 		<header id='section-1' ref={header} className='header'>
 			<div ref={backdrop}>
@@ -99,9 +106,15 @@ const Header = ({ arrow = (f) => f }) => {
 				</h2>
 			</div>
 
-			<Link to='section-3' smooth={true} spy={true} className='header-arrow'>
-				<MdKeyboardArrowDown />
-			</Link>
+			{mobile ? (
+				<Link to='section-3' smooth={true} spy={true} className='header-arrow'>
+					<MdKeyboardArrowDown />
+				</Link>
+			) : (
+				<div onClick={arrow} className='header-arrow'>
+					<MdKeyboardArrowDown />
+				</div>
+			)}
 		</header>
 	);
 };
