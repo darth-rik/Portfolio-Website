@@ -36,7 +36,13 @@ const Projects = ({ projects }) => {
 							>
 								<button className='btn btn--black btn--small'>Live Site</button>
 							</a>
-							<button className='btn btn--white btn--small'> View Code</button>
+							<a
+								href='https://github.com/darth-rik/StringZ'
+								target='_blank'
+								rel='noreferrer'
+							>
+								<button className='btn btn--white btn--small'>View Code</button>{" "}
+							</a>
 						</div>
 					</div>
 					<div className='project project--2'>
@@ -58,7 +64,16 @@ const Projects = ({ projects }) => {
 							>
 								<button className='btn btn--black btn--small'>Live Site</button>
 							</a>
-							<button className='btn btn--white btn--small'> View Code</button>
+							<a
+								href='https://github.com/darth-rik/FoodHunt'
+								target='_blank'
+								rel='noreferrer'
+							>
+								<button className='btn btn--white btn--small'>
+									{" "}
+									View Code
+								</button>
+							</a>
 						</div>
 					</div>
 					<div className='project project--3'>
@@ -82,7 +97,16 @@ const Projects = ({ projects }) => {
 							>
 								<button className='btn btn--black btn--small'>Live Site</button>
 							</a>
-							<button className='btn btn--white btn--small'> View Code</button>
+							<a
+								href='https://github.com/darth-rik/Todo_App'
+								target='_blank'
+								rel='noreferrer'
+							>
+								<button className='btn btn--white btn--small'>
+									{" "}
+									View Code
+								</button>
+							</a>
 						</div>
 					</div>
 				</div>

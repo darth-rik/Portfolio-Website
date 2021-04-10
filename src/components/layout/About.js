@@ -27,13 +27,13 @@ const About = ({ about }) => {
 					improve my skills, to learn new things and create high quality
 					websites and applications. */}
 					I welcome you to my website. I am a Front-End Developer having
-					experience in buiding full stack applications. Here you will find the
-					projects I built using the technology skills that I currently possess.
-					The first two projects are built from scratch with the designs I
-					created in Figma. <br /> I am now looking forward to work in an
-					environment where I can better utilise my skills and become a better
-					developer. <br /> If you have any questions or any queries please feel
-					free to contact me directly.
+					experience in building full stack applications. Here, you will find
+					the projects I built using the technology skills that I currently
+					possess. The first two projects were built from scratch with the
+					designs I created in Figma. <br /> I am now looking forward to work in
+					an environment where I can better utilize my skills and become a
+					better developer. <br /> If you have any questions or any queries
+					please feel free to contact me directly.
 				</p>
 				{/* <div className='description__full-story '>
 					{/* <a href=''>Read my story </a> */}
@@ -46,7 +46,7 @@ const About = ({ about }) => {
 						</a>
 					</li>
 					<li>
-						<a href=''>
+						<a href='https://www.linkedin.com/in/debanjit-sengupta/'>
 							<FaLinkedin />
 						</a>
 					</li>
@@ -54,9 +54,10 @@ const About = ({ about }) => {
 				<div className='description__btn '>
 					<a
 						style={{ color: "#fff" }}
-						href='../../docs/DEBANJIT_SENGUPTA_Software_Developer.pdf'
+						href='https://drive.google.com/file/d/1OftVP46r7J5JdnMi7xBSxx0YSqXghdUi/view?usp=sharing'
 						className=' btn btn--black'
-						download
+						target='_blank'
+						rel='noreferrer'
 					>
 						View Resume
 					</a>

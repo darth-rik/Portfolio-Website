@@ -13,13 +13,13 @@ const Footer = () => {
 						</a>
 					</li>
 					<li className='social__links'>
-						<a href=''>
+						<a href='https://www.linkedin.com/in/debanjit-sengupta/'>
 							<FaLinkedin />
 						</a>
 					</li>
 				</ul>
 
-				<p className='paragraph--small'>
+				{/* <p className='paragraph--small'>
 					Loading screen animation by{" "}
 					<a
 						style={{ textDecoration: "underline" }}
@@ -29,7 +29,7 @@ const Footer = () => {
 					>
 						Adrien Bourmault
 					</a>
-				</p>
+				</p> */}
 
 				<p className='paragraph--small'>
 					&copy; {new Date().getFullYear()} Debanjit Sengupta
