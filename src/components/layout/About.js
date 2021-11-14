@@ -54,7 +54,7 @@ const About = ({ about }) => {
         <div className="description__btn ">
           <a
             style={{ color: "#fff" }}
-            href="https://drive.google.com/file/d/1OftVP46r7J5JdnMi7xBSxx0YSqXghdUi/view?usp=sharing"
+            href="https://drive.google.com/file/d/10Og0F-bRM3CqPRCYci7pqz7Jb3l9WYoF/view?usp=sharing"
             className=" btn btn--black"
             target="_blank"
             rel="noreferrer"
